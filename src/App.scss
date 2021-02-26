@@ -19,11 +19,15 @@ body {
     padding: 20px;
   }
 
+  table {
+    margin: 20px;
+  }
+
   div.summary {
     display: block;
 
     margin-left: 40px;
-    width: 15%;
+    
     p {
       position: relative;
       top: 50%;
@@ -64,7 +68,7 @@ body {
     table-layout: auto;
 
     white-space: nowrap;
-    margin: 20px auto;
+    
 
     tr {
       th {
