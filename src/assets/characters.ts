@@ -1,0 +1,32 @@
+import albedo from "./characters/albedo.png";
+import amber from "./characters/amber.png";
+import babara from "./characters/babara.png";
+import bennett from "./characters/bennett.png";
+import diluc from "./characters/diluc.png";
+import diona from "./characters/diona.png";
+import fischl from "./characters/fischl.png";
+import jean from "./characters/jean.png";
+import traveler from "./characters/traveler.png";
+import kaeya from "./characters/kaeya.png";
+import klee from "./characters/klee.png";
+import lisa from "./characters/lisa.png";
+import mona from "./characters/mona.png";
+import noelle from "./characters/noelle.png";
+import razor from "./characters/razor.png";
+import sucrose from "./characters/sucrose.png";
+import venti from "./characters/venti.png";
+
+import beidou from "./characters/beidou.png";
+import chongyun from "./characters/chongyun.png";
+import ganyu from "./characters/ganyu.png";
+import kequing from "./characters/kequing.png";
+import ningguang from "./characters/ningguang.png";
+import qiqi from "./characters/qiqi.png";
+import xiangling from "./characters/xiangling.png";
+import xingqiu from "./characters/xingqiu.png";
+import xinyan from "./characters/xinyan.png";
+import xiao from "./characters/xiao.png";
+import zhongli from "./characters/zhongli.png";
+import tartaglia from "./characters/tartaglia.png";
+
+export {albedo, amber, babara, bennett, diluc, diona, fischl, jean, traveler, kaeya, klee, lisa, mona, noelle, razor, sucrose, venti, beidou, chongyun, ganyu, kequing, ningguang, qiqi, xiangling, xingqiu, xinyan, xiao, zhongli, tartaglia};

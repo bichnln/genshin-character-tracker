@@ -1,0 +1,54 @@
+$inactive-opacity: 0.3;
+$inactive-hover-opacity: 0.6;
+$acitve-opacity: 0.95;
+$active-hover-opacity: 1;
+
+.char-container {
+    text-align: center;
+    display: inline-block;
+    margin: 10px 15px;
+
+    .fas {
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+    }
+}
+
+.inactive {
+
+    :not(img) {
+        visibility: hidden;
+    }
+    img {
+        opacity: $inactive-opacity;
+    }
+
+    img:hover {
+        opacity: $inactive-hover-opacity;
+    }
+}
+
+.active {
+    
+    img {
+        opacity: $acitve-opacity;
+    }
+
+    img:hover {
+        opacity: $active-hover-opacity;
+    }
+
+    .fas {
+        
+        opacity: $acitve-opacity;
+    }
+
+    .fas:hover {
+        opacity: $active-hover-opacity;
+    }
+    
+}
+
+
