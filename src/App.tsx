@@ -3,20 +3,40 @@ import './App.scss';
 import Character from "./components/character/character";
 import * as characters from "./assets/characters";
 import * as visions from "./assets/visions";
+import domtoimage from 'dom-to-image';
 
 
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from './redux/store';
 import "./actions/teamActions";
 
 function App() {
 
   const team = useSelector((state: RootState) => state.team);
-  
-  const completion = Math.round((team.owned/team.total)*100);
+
+  const completion = Math.round((team.owned / team.total) * 100);
+
+  function getPNG() {
+    const node = document.getElementById("character-table");
+
+    
+    domtoimage.toJpeg(node as Node)
+    .then(imgSrc => {
+      let img = new Image();
+      img.src = imgSrc;
+
+      var w = window.open("");
+      w?.document.write(img.outerHTML);
+
+    })
+    .catch(err => console.log(err));
+
+
+
+  }
   return (
     <div className="App">
-      <table>
+      <table id="character-table">
         <thead>
           <tr>
             <th>Vision</th>
@@ -101,11 +121,14 @@ function App() {
       </table>
 
       <div className="summary">
-        <p>Owned: {team.owned}/{team.total} </p>
-        <p>Completion: {completion}%</p>
+        <p>
+          
+        </p>
+        <button onClick={() => getPNG()}>Open in new tab</button>
       </div>
     </div>
   );
 }
+
 
 export default App;

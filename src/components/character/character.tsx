@@ -45,6 +45,13 @@ const Character: React.FC<ICharacterProps> = props => {
 		dispatch(removeCharacter());
 	}
 
+	const maximiseConstellation = () => {
+		if (constellation < 0) {
+			dispatch(addCharacter());
+		}
+		setConstellation(6);
+	}
+
 	const handleClick = () => {
 		if (constellation < 6) 
 			addConstellation();
@@ -52,10 +59,14 @@ const Character: React.FC<ICharacterProps> = props => {
 			resetConstellation(); 
 	}
 
+	
+	
 	return (
 		<div className={constellation >= 0 ? "char-container active" : "inactive char-container"}>
 			
-			<img src={props.avatar} alt={props.name} onClick={()=> handleClick()}/>
+			<img src={props.avatar} alt={props.name} onClick={()=> handleClick()}
+			
+			/>
 			{/* <i className="fas fa-sync-alt" onClick={()=> resetConstellation()}></i> */}
 
 			<p className="constellation-text">C{constellation}</p>

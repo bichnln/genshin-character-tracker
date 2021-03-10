@@ -1,10 +1,14 @@
 $breakpoint-tablet: 900px;
-$breakpoint-phone: 600px;
+$breakpoint-phone: 700px;
 * {
   position: relative;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+*:focus {
+  outline: none;
 }
 
 body {
@@ -15,7 +19,9 @@ body {
 @media (min-width: $breakpoint-tablet) {
   .App {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 20px;
   }
 
@@ -32,6 +38,12 @@ body {
       position: relative;
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    button {
+      position: relative;
+      top: 60%;
+      transform: translateY(-60%);
     }
   }
 }
@@ -63,6 +75,7 @@ body {
 }
 .App {
   table {
+    margin-top: 10px;
     display: block;
 
     table-layout: auto;
@@ -91,5 +104,29 @@ body {
         }
       }
     }
+  }
+
+  button {
+    background-color: #0275d8;
+    color: white;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #0275d8;
+    line-height: 1.5em;
+    padding: 5px;
+    margin-top: 15px;
+    text-align: center;
+    vertical-align: middle;
+
+    
+  }
+  button:hover {
+      background-color: #065eaa;
+      border-color: #065eaa;
+    
+  }
+
+  .temp {
+    color: red;
   }
 }
